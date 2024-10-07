@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>โปรแกรมเพื่อการคำนวณเกรดนิสิต</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: blue;
+            font-size: 300%;
+            margin-bottom: 20px;
+        }
+        form {
+            border: 2px solid powderblue;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+        p {
+            color: red;
+            font-size: 160%;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 120%;
+            margin-right: 10px;
+        }
+        select {
+            margin-bottom: 15px;
+            padding: 5px;
+            font-size: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 110%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>โปรแกรมเพื่อการคำนวณเกรดนิสิตสาขาวิทยาการคอมพิวเตอร์</h1>
+    <form id="gradeForm">
+        <!-- วิชาที่ 1 ถึง 10 -->
+        <label for="score1Select">ระบุเกรดวิชา 254251:</label>
+        <select id="score1Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score2Select">254261 Computer Architecture:</label>
+        <select id="score2Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score3Select">254451 Data Structures:</label>
+        <select id="score3Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score4Select">Computer Network 254363:</label>
+        <select id="score4Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score5Select">ระบุเกรดวิชา 254374:</label>
+        <select id="score5Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score6Select">ระบุเกรดวิชา 254383:</label>
+        <select id="score6Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score7Select">ระบุเกรดวิชา 255121:</label>
+        <select id="score7Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score8Select">ระบุเกรดวิชา 254491</label>
+        <select id="score8Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score9Select">ระบุเกรดวิชา 254271:</label>
+        <select id="score9Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <label for="score10Select">ระบุเกรดวิชา 254275:</label>
+        <select id="score10Select">
+            <option value="4.0">A</option>
+            <option value="3.5">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.5">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.5">D+</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+        <br><br>
+
+        <button type="button" onclick="calculateGrades()">คำนวณ</button>
+    </form>
+
+    <p> <span id="y12"></span></p>
+    <p>  <span id="y24"></span></p>
+    <p> <span id="y36"></span></p>
+    <p>  <span id="y48"></span></p> 
+    
+    <p>เกรดเฉลี่ยจบ = <span id="finalGrade"></span></p>
+</center>
+
+<script>
+function calculateGrades() {
+    var scores = [];
+    for (var i = 1; i <= 10; i++) {
+        var select = document.getElementById("score" + i + "Select");
+        scores.push(parseFloat(select.value));
+    }
+
+    var ph_norm = scores.map(score => ((score - 1.0) / (4.0 - 1.0)) * 2 - 1);
+    
+    var ans12 = 2.062 + (ph_norm[0] * 0.156);
+    var ans24 = 2.042 + (0.134 * ph_norm[0]) - (0.114 * ph_norm[1]);
+    var ans36 = 1.775 + (0.310 * ph_norm[0]);
+    var ans48 = 1.303 + (0.603 * ph_norm[0]);
+
+    document.getElementById("y12").innerHTML = ans12.toFixed(4);
+    document.getElementById("y24").innerHTML = ans24.toFixed(4);
+    document.getElementById("y36").innerHTML = ans36.toFixed(4);
+    document.getElementById("y48").innerHTML = ans48.toFixed(4);
+
+    // คำนวณเกรดเฉลี่ย
+    var totalScore = scores.reduce((a, b) => a + b, 0);
+    var averageScore = totalScore / scores.length;
+
+    document.getElementById("finalGrade").innerHTML = averageScore.toFixed(2);
+}
+</script>
+
+</body>
+</html>
